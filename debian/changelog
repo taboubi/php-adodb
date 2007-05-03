@@ -1,0 +1,5 @@
+php-adodb (5.04-1) unstable; urgency=low
+
+  * Initial release (Closes: #422159) 
+
+ -- Raphael Geissert <atomo64@gmail.com>  Thu, 03 May 2007 18:10:28 -0500

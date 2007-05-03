@@ -1,0 +1,14 @@
+Source: php-adodb
+Section: web
+Priority: optional
+Maintainer: Raphael Geissert <atomo64@gmail.com>
+Build-Depends: debhelper (>= 5), php5-dev (>= 5.2.0)
+Standards-Version: 3.7.2
+
+Package: php5-adodb
+Architecture: any
+Depends: ${shlibs:Depends}, ${php:Depends}
+Enhances: libphp-adodb
+Description: Extension optimising ADOdb database abstraction library
+ It provides up to 100% speedup by replacing parts of ADOdb with C code.
+ ADOdb will auto-detect if this extension is installed and use it automatically.

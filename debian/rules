@@ -1,0 +1,72 @@
+#!/usr/bin/make -f
+EXTN=adodb
+BUILD=$(CURDIR)/debian/php5-$(EXTN)
+PHP_EX=$(shell /usr/bin/php-config5 --extension-dir)
+
+#export DH_VERBOSE=1
+
+DEB_HOST_GNU_TYPE    ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+DEB_BUILD_GNU_TYPE	?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+
+CFLAGS += -O2 -Wall -fno-strict-aliasing
+LFSFLAGS += -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
+
+# Enable IEEE-conformant floating point math on alphas (not the default)
+ifeq (alpha-linux-gnu,$(DEB_HOST_GNU_TYPE))
+	CFLAGS += -mieee
+endif
+
+ifeq ($(DEB_HOST_GNU_TYPE), $(findstring $(DEB_HOST_GNU_TYPE), ia64-linux-gnu powerpc64-linux-gnu))
+	CFLAGS += -g
+else
+	CFLAGS += -gstabs
+endif
+
+
+build-stamp:
+	dh_testdir
+	phpize5
+	./configure --disable-rpath --prefix=$(BUILD)/usr \
+		--mandir=\$${prefix}/share/man \
+		--infodir=\$${prefix}/share/info \
+		--with-php-config=/usr/bin/php-config5
+	$(MAKE) DESTDIR=$(BUILD)
+	
+	touch build-stamp
+
+build: build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -rf build-stamp
+	[ ! -f Makefile ] || $(MAKE) distclean
+	phpize5 --clean
+	dh_clean
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_installdirs
+	install -D -m 644 modules/$(EXTN).so debian/php5-$(EXTN)$(PHP_EX)/$(EXTN).so
+	install -D -m 644 debian/$(EXTN).ini debian/php5-$(EXTN)/etc/php5/conf.d/$(EXTN).ini
+
+binary-indep:
+
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs
+	dh_installdocs
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	echo "php:Depends=phpapi-`php-config5 --phpapi`" >> debian/php5-$(EXTN).substvars
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build-php clean binary-indep binary-arch binary install
