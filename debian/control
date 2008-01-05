@@ -1,13 +1,18 @@
 Source: php-adodb
 Section: web
 Priority: optional
-Maintainer: Raphael Geissert <atomo64@gmail.com>
+Maintainer: Debian PHP Maintainers <pkg-php-maint@lists.alioth.debian.org>
+Uploaders: Raphael Geissert <atomo64@gmail.com>
 Build-Depends: debhelper (>= 5), php5-dev (>= 5.2.0)
-Standards-Version: 3.7.2
+Standards-Version: 3.7.3
+Homepage: http://adodb.sourceforge.net/
+Vcs-Svn: svn://svn.debian.org/pkg-php/php-adodb/trunk
+Vcs-Browser: http://svn.debian.org/wsvn/pkg-php/php-adodb/trunk
+XS-DM-Upload-Allowed: yes
 
 Package: php5-adodb
 Architecture: any
-Depends: ${shlibs:Depends}, ${php:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${php:Depends}
 Enhances: libphp-adodb
 Description: Extension optimising ADOdb database abstraction library
  It provides up to 100% speedup by replacing parts of ADOdb with C code.
