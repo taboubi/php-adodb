@@ -6,6 +6,7 @@ php-adodb (5.04-4) UNRELEASED; urgency=low
     + build-depend on cdbs
     + improved the package description
     + make the dependency on phpapi ORed, with the first possibility being php5
+    + bump standards version, no change needed
 
  -- Raphael Geissert <atomo64@gmail.com>  Fri, 27 Mar 2009 22:21:06 -0600
 
