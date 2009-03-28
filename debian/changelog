@@ -1,3 +1,9 @@
+php-adodb (5.04-4) UNRELEASED; urgency=low
+
+  * 
+
+ -- Raphael Geissert <atomo64@gmail.com>  Fri, 27 Mar 2009 22:21:06 -0600
+
 php-adodb (5.04-3) unstable; urgency=low
 
   * debian/control: Added XS-DM-Upload-Allowed: yes
