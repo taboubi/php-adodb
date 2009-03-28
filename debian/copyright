@@ -23,9 +23,12 @@ License:
     OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
     SUCH DAMAGE.
 
-On Debian systems, the complete text of the BSD License can be 
-found in `/usr/share/common-licenses/BSD'.
+On Debian systems, the complete text of the BSD Licence
+can be found in "/usr/share/common-licenses/BSD".
 
-
-The Debian packaging is (C) 2007, Raphael Geissert <atomo64@gmail.com> and
-is licensed under the GPL, see `/usr/share/common-licenses/GPL'.
+The Debian packaging is:
+    Copyright (C) 2007, 2009 Raphael Geissert <atomo64@gmail.com>
+and is licensed, unless otherwise specified, under the terms of the GNU GPL
+as published by the Free Software Foundation, either version 2 of the License,
+or (at your option), any later version. The full licence text is available
+at "/usr/share/common-licenses/GPL-2", on Debian systems.
