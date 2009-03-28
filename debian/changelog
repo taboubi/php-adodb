@@ -4,9 +4,13 @@ php-adodb (5.04-4) UNRELEASED; urgency=low
   * debian/copyright: updated and clarified the package's licence
   * debian/control:
     + build-depend on cdbs
+    + bump versioned dependency on debhelper and cdbs, for dh_lintian
     + improved the package description
     + make the dependency on phpapi ORed, with the first possibility being php5
     + bump standards version, no change needed
+  * debian/lintian-overrides, override:
+    + spelling-error-in-description mysql MySQL
+      - It is a reference to the driver name, not the product
 
  -- Raphael Geissert <atomo64@gmail.com>  Fri, 27 Mar 2009 22:21:06 -0600
 
