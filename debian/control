@@ -3,7 +3,7 @@ Section: web
 Priority: optional
 Maintainer: Debian PHP Maintainers <pkg-php-maint@lists.alioth.debian.org>
 Uploaders: Raphael Geissert <atomo64@gmail.com>
-Build-Depends: debhelper (>= 5), php5-dev (>= 5.2.0)
+Build-Depends: debhelper (>= 5), php5-dev (>= 5.2.0), cdbs
 Standards-Version: 3.7.3
 Homepage: http://adodb.sourceforge.net/
 Vcs-Svn: svn://svn.debian.org/pkg-php/php-adodb/trunk

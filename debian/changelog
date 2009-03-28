@@ -2,7 +2,9 @@ php-adodb (5.04-4) UNRELEASED; urgency=low
 
   * debian/rules: rewritten, now using cdbs
   * debian/copyright: updated and clarified the package's licence
-  * debian/control: improved the package description
+  * debian/control:
+    + build-depend on cdbs
+    + improved the package description
 
  -- Raphael Geissert <atomo64@gmail.com>  Fri, 27 Mar 2009 22:21:06 -0600
 
