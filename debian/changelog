@@ -1,4 +1,4 @@
-php-adodb (5.04-4) UNRELEASED; urgency=low
+php-adodb (5.04-4) unstable; urgency=low
 
   * debian/rules: rewritten, now using cdbs
   * debian/copyright: updated and clarified the package's licence
@@ -14,7 +14,7 @@ php-adodb (5.04-4) UNRELEASED; urgency=low
     + spelling-error-in-description mysql MySQL
       - It is a reference to the driver name, not the product
 
- -- Raphael Geissert <atomo64@gmail.com>  Fri, 27 Mar 2009 22:21:06 -0600
+ -- Raphael Geissert <atomo64@gmail.com>  Sat, 28 Mar 2009 02:42:04 -0600
 
 php-adodb (5.04-3) unstable; urgency=low
 
