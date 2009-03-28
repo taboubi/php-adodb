@@ -1,5 +1,5 @@
 Source: php-adodb
-Section: web
+Section: php
 Priority: optional
 Maintainer: Debian PHP Maintainers <pkg-php-maint@lists.alioth.debian.org>
 Uploaders: Raphael Geissert <atomo64@gmail.com>

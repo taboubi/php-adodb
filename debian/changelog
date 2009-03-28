@@ -9,6 +9,7 @@ php-adodb (5.04-4) UNRELEASED; urgency=low
     + make the dependency on phpapi ORed, with the first possibility being php5
     + bump standards version, no change needed
     + change the VCS URLs, bye bye svn, hello git
+    + section is now 'php' due to recent changes in the archive
   * debian/lintian-overrides, override:
     + spelling-error-in-description mysql MySQL
       - It is a reference to the driver name, not the product
