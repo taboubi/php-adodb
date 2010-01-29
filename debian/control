@@ -8,7 +8,6 @@ Standards-Version: 3.8.1
 Homepage: http://adodb.sourceforge.net/
 Vcs-Git: git://git.debian.org/pkg-php/php-adodb.git
 Vcs-Browser: http://git.debian.org/?p=pkg-php/php-adodb.git
-XS-DM-Upload-Allowed: yes
 
 Package: php5-adodb
 Architecture: any
