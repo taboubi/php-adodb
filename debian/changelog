@@ -1,3 +1,14 @@
+php-adodb (5.04-5) unstable; urgency=low
+
+  * Drop DM-UA field
+  * Update my email address
+  * Update standards version to 3.8.4, no changes needed
+  * Drop ORed dependency on php5 (Closes: #566298)
+  * Build with some hardening flags
+  * Bump copyright year
+
+ -- Raphael Geissert <geissert@debian.org>  Fri, 29 Jan 2010 15:58:51 -0600
+
 php-adodb (5.04-4) unstable; urgency=low
 
   * debian/rules: rewritten, now using cdbs
