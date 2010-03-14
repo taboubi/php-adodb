@@ -5,6 +5,7 @@ PHP_EX=$(shell /usr/bin/php-config5 --extension-dir)
 
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/autotools.mk
+include /usr/share/cdbs/1/rules/patchsys-quilt.mk
 
 CFLAGS += -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security
 DEB_CONFIGURE_EXTRA_FLAGS = --disable-rpath --with-php-config=/usr/bin/php-config5
