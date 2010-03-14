@@ -1,0 +1,19 @@
+Description: Fix the download url displayed as a part of the module
+ information.
+Origin: vendor
+Forwarded: no
+Last-Update: 2010-03-14
+
+Index: php-adodb/adodb.c
+===================================================================
+--- php-adodb.orig/adodb.c
++++ php-adodb/adodb.c
+@@ -138,7 +138,7 @@ PHP_MINFO_FUNCTION(adodb)
+ 	sprintf(vers,"%4.2f", (float) ADODB_EXTENSION);
+ 	php_info_print_table_start(); 
+ 	php_info_print_table_row(2, "Info", "Extension requires ADOdb classes"); 
+-	php_info_print_table_row(2, "Download", "http://php.weblogs.com/adodb"); 
++	php_info_print_table_row(2, "Download", "http://adodb.sourceforge.net/"); 
+ 	php_info_print_table_row(2, "API Version", vers); 
+ 	php_info_print_table_end(); 
+ } 
