@@ -1,3 +1,11 @@
+php-adodb (5.04-6) unstable; urgency=low
+
+  * Use quilt as patch system
+  * Add support for the 5.3 API (Closes: #569414)
+  * Fix the URL to the AdoDB download page
+
+ -- Raphael Geissert <geissert@debian.org>  Sun, 14 Mar 2010 13:17:10 -0600
+
 php-adodb (5.04-5) unstable; urgency=low
 
   * Drop DM-UA field
