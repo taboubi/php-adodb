@@ -1,0 +1,18 @@
+Description: Add support for the PHP 5.4 API
+Forwarded: no
+Origin: vendor
+Last-Update: 2011-01-24
+
+Index: php-adodb/adodb.c
+===================================================================
+--- php-adodb.orig/adodb.c
++++ php-adodb/adodb.c
+@@ -108,7 +108,7 @@ adodb_functions[] = {
+ }; 
+ #else
+ /* PHP 5 */
+-function_entry adodb_functions[] = {
++zend_function_entry adodb_functions[] = {
+    	PHP_FE(adodb_movenext,NULL) 
+ 	PHP_FE(adodb_getall,NULL)   
+ 	{NULL, NULL, NULL} 
