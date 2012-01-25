@@ -3,7 +3,7 @@ Section: php
 Priority: optional
 Maintainer: Debian PHP Maintainers <pkg-php-maint@lists.alioth.debian.org>
 Uploaders: Raphael Geissert <geissert@debian.org>
-Build-Depends: debhelper (>= 6.0.7~), php5-dev (>= 5.2.0), cdbs (>= 0.4.52~), quilt
+Build-Depends: debhelper (>= 6.0.7~), php5-dev (>= 5.2.0), cdbs (>= 0.4.52~)
 Standards-Version: 3.9.2
 Homepage: http://adodb.sourceforge.net/
 Vcs-Git: git://git.debian.org/pkg-php/php-adodb.git
