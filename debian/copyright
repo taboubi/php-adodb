@@ -9,7 +9,16 @@ Copyright: 2003-2005 by John Lim
 
 License:
     Redistribution and use in source and binary forms, with or without
-    modification, are permitted under the terms of the BSD License.
+    modification, are permitted provided that the following conditions
+    are met:
+    1. Redistributions of source code must retain the above copyright
+       notice, this list of conditions and the following disclaimer.
+    2. Redistributions in binary form must reproduce the above copyright
+       notice, this list of conditions and the following disclaimer in the
+       documentation and/or other materials provided with the distribution.
+    3. Neither the name of the University nor the names of its contributors
+       may be used to endorse or promote products derived from this software
+       without specific prior written permission.
 
     THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
     ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
@@ -23,8 +32,10 @@ License:
     OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
     SUCH DAMAGE.
 
-On Debian systems, the complete text of the BSD Licence
-can be found in "/usr/share/common-licenses/BSD".
+The above license is an exact copy of the "BSD license" as published by
+"The Regents of the University of California." It is assumed that "THE
+REGENTS AND CONTRIBUTORS" refer to the copyright holder(s), in this case
+being John Lim.
 
 The Debian packaging is:
     Copyright (C) 2007, 2009, 2010 Raphael Geissert <atomo64@gmail.com>
