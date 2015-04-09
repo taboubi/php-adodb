@@ -108,7 +108,7 @@ adodb_functions[] = {
 }; 
 #else
 /* PHP 5 */
-function_entry adodb_functions[] = {
+zend_function_entry adodb_functions[] = {
    	PHP_FE(adodb_movenext,NULL) 
 	PHP_FE(adodb_getall,NULL)   
 	{NULL, NULL, NULL} 
@@ -162,8 +162,8 @@ static void adodb_init_zval(zval *v, char *s)
 	v->type = IS_STRING;
 	v->value.str.val = s;
 	v->value.str.len = strlen(s);
-	v->is_ref = 0;
-	v->refcount = 1;
+	Z_SET_ISREF_P(v);	// v->is_ref = 0;       // Invalid for PHP5.3
+	Z_SET_REFCOUNT_P(v, 1);	// v->refcount = 1;     // Invalid for PHP5.3
 }
 
 /* {{{ PHP_MINIT_FUNCTION
@@ -277,7 +277,7 @@ zval		**fields;
 	fci.function_table = EG(function_table);
 	fci.function_name = &adodb_zvals[zval_ocifetch];
 	fci.symbol_table = NULL;
-	fci.object_pp = NULL;
+	fci.object_ptr = NULL; 	// fci.object_pp = NULL; // Invalid in PHP5.3
 	fci.retval_ptr_ptr = &retval;
 	fci.param_count = 2;
 	fci.params = &params[1];
